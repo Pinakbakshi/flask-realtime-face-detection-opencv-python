@@ -1,19 +1,26 @@
-# flask-realtime-face-detection-opencv-python
-realtime face detection using python and opencv , webcam should be enabled to get it working.
+# Flask Real-Time Computer Vision Demo
 
-#How to use it
+A Flask-based demonstration project for processing camera frames and displaying computer-vision results.
 
-1.Install all the dependencies it has 
-: opencv 2.x version
-: python 2.7
-: flask
+## Compatibility
 
-2.Now train the algorithm by executing create_data.py file
+The original documentation references older Python and OpenCV versions. Check the source and dependency files before running it: a migration to a supported Python 3 environment may be necessary.
 
-3.After the data has been trained, you can execute face_recognise.py to make it run
+## Local setup
 
-4.For using it on a web based interface, run , python app.py and open your localhost
+1. Inspect the entry point and dependency manifest.
+2. Create an isolated Python 3 environment.
+3. Install compatible, pinned dependencies.
+4. Run the application locally with development/debug settings disabled outside active debugging.
+5. Keep the development server bound to localhost unless a secure deployment has been configured.
 
+## Development checklist
 
-#note:
-you can skip heroku part, only needed things are flask and the python scripts.
+- Document tested runtime and dependency versions.
+- Handle unavailable cameras and invalid frames gracefully.
+- Separate processing logic from web routes.
+- Avoid storing or transmitting camera frames unless the application explicitly requires it.
+- Do not expose an unauthenticated camera-processing endpoint publicly.
+- Add tests for error handling and the main processing functions.
+
+Confirm the setup commands and current capabilities against the source code; this README does not claim the legacy application has already been modernized.
